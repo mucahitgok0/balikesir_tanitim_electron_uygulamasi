@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balıkesir Tanıtımı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 50px 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Balıkesir Tanıtımı</h1>
+        <nav>
+            <ul>
+                <li><a href="#hakkinda">Hakkında</a></li>
+                <li><a href="#gezilecek-yerler">Gezilecek Yerler</a></li>
+                <li><a href="#etkinlikler">Etkinlikler</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hakkinda">
+        <h2>Balıkesir Hakkında</h2>
+        <p>Balıkesir, Marmara Bölgesi'nin kuzeybatısında yer alan bir ildir. Tarihi, doğal güzellikleri ve kültürel mirasıyla ünlüdür.</p>
+    </section>
+
+    <section id="gezilecek-yerler">
+        <h2>Gezilecek Yerler</h2>
+        <ul>
+            <li>Kaz Dağları</li>
+            <li>Ayvalık Cunda Adası</li>
+            <li>Gönen Kaplıcaları</li>
+            <li>Troya Antik Kenti</li>
+            <li>İvrindi Kaplıcaları</li>
+        </ul>
+    </section>
+
+    <section id="etkinlikler">
+        <h2>Etkinlikler</h2>
+        <p>Balıkesir'de yıl boyunca birçok kültürel festival, spor etkinliği ve lezzet turları düzenlenmektedir.</p>
+    </section>
+
+    <section id="iletisim">
+        <h2>İletişim</h2>
+        <p>Bize ulaşmak için:</p>
+        <address>
+            Balıkesir Tanıtım Ofisi<br>
+            Adres: Örnek Mahallesi, Örnek Sokak No: 123, Balıkesir<br>
+            Telefon: 0123 456 7890<br>
+            E-posta: info@balikesirtanitim.com
+        </address>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Balıkesir Tanıtımı</p>
+    </footer>
+
+    <script>
+        // Buraya JavaScript kodları eklenebilir, ancak şu anda örnek bir web sitesi için gerekli değil.
+    </script>
+</body>
+</html>
