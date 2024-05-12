@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "^30.0.2"
+    "electron": "^30.0.2",
+    "firebase": "^10.11.1"
   }
 }
