@@ -162,3 +162,38 @@ button:hover{
 .navbarpadding{
     padding-top: 75px;
 }
+
+.item {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .item img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 60%;
+    height: 50%;
+  }
+  
+  .item p {
+    text-align: justify;
+    line-height: 2.0;
+    
+  }
+  h1{
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px auto;
+    width: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    text-align: center;
+  }
