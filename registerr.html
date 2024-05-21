@@ -1,114 +1,156 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <style>
-        form{
-            position:absolute;
-            top: 20%;
-            left: 35%;
-        }
+      form {
+        position: absolute;
+        top: 20%;
+        left: 35%;
+      }
+      .logoResim {
+        height: auto;
+        left: 75px;
+        width: 75px;
+      }
     </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Firebase Auth</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="final.html">Logo</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>  
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Link</a></li>
-                  <li><a class="dropdown-item" href="#">Another link</a></li>
-                  <li><a class="dropdown-item" href="#">A third link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="final.html">
+          <img src="uyglogo.png" class="logoResim" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="final.html">Ana Sayfa</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >İlçeler</a
+              >
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="merkez.html">Merkez</a></li>
+                <li><a class="dropdown-item" href="ayvalik.html">Ayvalık</a></li>
+                <li><a class="dropdown-item" href="balya.html">Balya</a></li>
+                <li><a class="dropdown-item" href="bandirma.html">Bandırma</a></li>
+                <li><a class="dropdown-item" href="bigadic.html">Bigadiç</a></li>
+                <li><a class="dropdown-item" href="burhaniye.html">Burhaniye</a></li>
+                <li><a class="dropdown-item" href="dursunbey.html">Dursunbey</a></li>
+                <li><a class="dropdown-item" href="edremit.html">Edremit</a></li>
+                <li><a class="dropdown-item" href="erdek.html">Erdek</a></li>
+                <li><a class="dropdown-item" href="gomec.html">Gömeç</a></li>
+                <li><a class="dropdown-item" href="gonen.html">Gönen</a></li>
+                <li><a class="dropdown-item" href="havran.html">Havran</a></li>
+                <li><a class="dropdown-item" href="ivrindi.html">İvrindi</a></li>
+                <li><a class="dropdown-item" href="kepsut.html">Kepsut</a></li>
+                <li><a class="dropdown-item" href="manyas.html">Manyas</a></li>
+                <li><a class="dropdown-item" href="marmara.html">Marmara</a></li>
+                <li><a class="dropdown-item" href="savastepe.html">Savaştepe</a></li>
+                <li><a class="dropdown-item" href="sindirgi.html">Sındırgı</a></li>
+                <li><a class="dropdown-item" href="susurluk.html">Susurluk</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="etkinlikler.html">Etkinlikler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hakkimizda.html">Hakkımızda</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    <form id="MainForm" class="w-25 m-4">
-        <h2 class="mb-3 text-center">Kayıt ol</h2>
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="emailInp" placeholder="name@example.com">
-            <label for="emailInp">Email adresi</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="password" class="form-control" id="PassInp" placeholder="Password">
-            <label for="PassInp">Şifre</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="fnameInp" placeholder="First Name">
-            <label for="fnameInp">İsim</label>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="lnameInp" placeholder="Last Name">
-            <label for="lnameInp">Soyisim</label>
-        </div>
-        <button type="submit" class="btn btn-primary" style="float:right">Hesap aç</button>
-        
-        <a href="loginn.html"><button type="button" class="btn btn-primary me-2">Giriş yap</button></a>
-    </form>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-        import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
-        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
-        const firebaseConfig = {
-            apiKey: "AIzaSyAI2-U00NY31AzOUL-lv7FLCEHI2DHhzzY",
-            authDomain: "giris-1009.firebaseapp.com",
-            databaseURL: "https://giris-1009-default-rtdb.firebaseio.com",
-            projectId: "giris-1009",
-            storageBucket: "giris-1009.appspot.com",
-            messagingSenderId: "12819811916",
-            appId: "1:12819811916:web:2b028edecd0e4463c6aee9"
-        };
-        const app = initializeApp(firebaseConfig);
-        const db = getDatabase();
-        const auth = getAuth(app);
+      </div>
+    </nav>
+  <form id="MainForm" class="w-25 m-4">
+    <h2 class="mb-3 text-center">Kayıt ol</h2>
+    <div class="form-floating mb-3">
+      <input type="email" class="form-control" id="emailInp" placeholder="name@example.com">
+      <label for="emailInp">Email adresi</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="password" class="form-control" id="PassInp" placeholder="Password">
+      <label for="PassInp">Şifre</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="fnameInp" placeholder="First Name">
+      <label for="fnameInp">İsim</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="lnameInp" placeholder="Last Name">
+      <label for="lnameInp">Soyisim</label>
+    </div>
+    <button type="submit" class="btn btn-primary" style="float:right">Hesap aç</button>
 
-        let emailInp = document.getElementById("emailInp");
-        let passInp = document.getElementById("PassInp");
-        let fnameInp = document.getElementById("fnameInp");
-        let lnameInp = document.getElementById("lnameInp");
-        let mainForm = document.getElementById("MainForm");
+    <a href="loginn.html"><button type="button" class="btn btn-primary me-2">Giriş yap</button></a>
+  </form>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+    const firebaseConfig = {
+      apiKey: "AIzaSyAI2-U00NY31AzOUL-lv7FLCEHI2DHhzzY",
+      authDomain: "giris-1009.firebaseapp.com",
+      databaseURL: "https://giris-1009-default-rtdb.firebaseio.com",
+      projectId: "giris-1009",
+      storageBucket: "giris-1009.appspot.com",
+      messagingSenderId: "12819811916",
+      appId: "1:12819811916:web:2b028edecd0e4463c6aee9"
+    };
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase();
+    const auth = getAuth(app);
 
-        let registerUser = evt => {
-            evt.preventDefault();
+    let emailInp = document.getElementById("emailInp");
+    let passInp = document.getElementById("PassInp");
+    let fnameInp = document.getElementById("fnameInp");
+    let lnameInp = document.getElementById("lnameInp");
+    let mainForm = document.getElementById("MainForm");
 
-            createUserWithEmailAndPassword(auth, emailInp.value, passInp.value)
-            .then((credentials)=>{
-                return set(ref(db,'UsersAuthList/' + credentials.user.uid),{
-                    firstname: fnameInp.value,
-                    lastname: lnameInp.value
-                });
-            })
-            .then(() => {
-                console.log("User registered successfully.");
-            })
-            .catch((error)=>{
-                alert(error.message);
-                console.error(error.code);
-                console.error(error.message);
-            });
-        }
-        mainForm.addEventListener('submit', registerUser);
-    </script>
+    let registerUser = evt => {
+      evt.preventDefault();
+
+      createUserWithEmailAndPassword(auth, emailInp.value, passInp.value)
+        .then((credentials) => {
+          return set(ref(db, 'UsersAuthList/' + credentials.user.uid), {
+            firstname: fnameInp.value,
+            lastname: lnameInp.value
+          });
+        })
+        .then(() => {
+          console.log("User registered successfully.");
+        })
+        .catch((error) => {
+          alert(error.message);
+          console.error(error.code);
+          console.error(error.message);
+        });
+    }
+    mainForm.addEventListener('submit', registerUser);
+  </script>
 </body>
+
 </html>
