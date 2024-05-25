@@ -2,16 +2,75 @@
 <html lang="en">
 
 <head>
-  <title>Bootstrap Example</title>
+  <title>Balıkesir Tanıtımı</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .navbarpadding {
+      padding-top: 70px;
+    }
+    
+    .hero-image h4 {
+      color: rgb(0, 0, 0);
+      background-color: rgba(121, 119, 119, 0.27);
+      padding: 10px;
+    }
+
+    .hero-image {
+      background-image: url('https://cmsapi.balikesir.bel.tr/Media/Anasayfa_Slider/dynupload_202106181002.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgb(0, 0, 0);
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .content ul li img {
+      max-width: 150px;
+      height: auto;
+    }
+
+    .balikesir-logo {
+      max-width: 150px;
+      margin-top: 20px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #d0d2d4;
+    }
+
+    .footer-location, .footer-contact {
+      margin-left: 20px;
+    }
+
+    .footer h4 {
+      margin-bottom: 10px;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+  </style>
 </head>
 
 <body class="navbarpadding">
-  <nav id="navbarKonum" class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <nav id="navbarKonum" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
     <div class="container-fluid">
       <a href="final.html">
         <img src="uyglogo.png" class="logoResim" href="final.html">
@@ -55,21 +114,101 @@
             <a class="nav-link" href="hakkimizda.html">Hakkımızda</a>
           </li>
           <div class="btn-group position-absolute end-0 " role="group" aria-label="Basic example">
-            <li class = "cart">
-              <a style="padding-right: 15px;"href="./cart.html"><button class="btn btn-primary">
+            <li class="cart">
+              <a style="padding-right: 15px;" href="./cart.html"><button class="btn btn-primary">
                 <icon-icon name="basket">cart<span>0</span>
               </a>
             </li>
-            <a style="padding-right: 15px;"href="./registerr.html"><button type="button" class="btn btn-primary">Kayıt ol</button></a>
-            <a style="padding-right: 15px;"href="./loginn.html"><button type="button" class="btn btn-primary">Giriş yap</button></a>
-  
-
+            <a style="padding-right: 15px;" href="./registerr.html"><button type="button" class="btn btn-primary">Kayıt ol</button></a>
+            <a style="padding-right: 15px;" href="./loginn.html"><button type="button" class="btn btn-primary">Giriş yap</button></a>
           </div>
         </ul>
       </div>
     </div>
   </nav>
-  <a>Anasayfa</a>
-</body>
 
+  <div class="hero-image">
+    <h1><i>Balıkesir</i></h1>
+    <h4><i>Türkiye'nin güzide şehirlerinden biri</i></h4>
+  </div>
+
+  <div class="content">
+    <h2>Balıkesir'in Genel Tarihi</h2>
+    <p>
+      Balıkesir, Türkiye'nin Marmara Bölgesi'nin güneyinde yer alan ve zengin tarihiyle dikkat çeken bir ildir. Balıkesir'in tarihi, antik çağlardan günümüze kadar uzanan geniş bir dönemi kapsar ve bu süre zarfında birçok medeniyete ev sahipliği yapmıştır.
+
+<br><b>Antik Çağ</b>
+<br>Balıkesir ve çevresi, antik çağlarda çeşitli uygarlıkların yerleşim alanı olmuştur. Bölgenin bilinen en eski sakinleri Misyalılar ve Pelasglar'dır. Antik dönemde, bölgenin en önemli şehirlerinden biri olan Kyzikos (bugünkü Erdek yakınlarında) ve Daskyleion (bugünkü Bandırma yakınlarında) önemli ticaret ve kültür merkezleriydi. Kyzikos, özellikle Roma İmparatorluğu döneminde büyük bir zenginlik ve refah yaşamıştır.
+
+<br>Roma ve Bizans Dönemi
+<br>Roma İmparatorluğu döneminde Balıkesir, Roma'nın Anadolu'daki önemli şehirlerinden biri olmuştur. Roma İmparatorluğu'nun ikiye bölünmesiyle birlikte Bizans İmparatorluğu'nun hâkimiyeti altına giren Balıkesir, bu dönemde dini ve ticari açıdan önemli bir merkez olmayı sürdürmüştür. Bizans döneminde, bölge sık sık Arap akınlarına maruz kalmış ve bu nedenle savunma amacıyla birçok kale inşa edilmiştir.
+
+<br><b>Selçuklu ve Osmanlı Dönemi</b>
+<br>yüzyılda Selçuklu Türklerinin Anadolu'ya gelmesiyle birlikte, Balıkesir ve çevresi de Türklerin hâkimiyetine girmeye başlamıştır. Selçuklu İmparatorluğu'nun zayıflamasıyla birlikte, Balıkesir Karesioğulları Beyliği'nin yönetimine girmiştir. 14. yüzyılda Osmanlı İmparatorluğu'nun genişlemesiyle birlikte Karesioğulları Beyliği, Osmanlı topraklarına katılmış ve Balıkesir Osmanlı hâkimiyeti altına girmiştir.
+<br>Osmanlı döneminde Balıkesir, tarım ve ticaret
+açısından önemli bir merkez haline gelmiştir. Bölgede tarım, özellikle zeytincilik, bağcılık ve hayvancılık gelişmiştir. Ayrıca, Osmanlı döneminde yapılan cami, medrese ve han gibi yapılar, Balıkesir'in kültürel ve mimari zenginliğine katkıda bulunmuştur.
+
+<br><b>Cumhuriyet Dönemi</b>
+<br>1923 yılında Türkiye Cumhuriyeti'nin kurulmasıyla birlikte Balıkesir, yeni Türkiye'nin önemli illerinden biri olmuştur. Cumhuriyet döneminde tarımın yanı sıra sanayi ve turizm alanlarında da gelişmeler yaşanmıştır. Balıkesir, doğal güzellikleri, termal kaynakları ve tarihi kalıntıları ile turistik açıdan önemli bir merkez haline gelmiştir.
+
+<br><b>Modern Balıkesir</b>
+Günümüzde Balıkesir, hem Marmara hem de Ege Denizi'ne kıyısı olan nadir illerden biridir. Bu coğrafi konumu sayesinde Balıkesir, önemli bir lojistik ve ticaret merkezi olma özelliğini korumaktadır. Ayrıca, Balıkesir Üniversitesi gibi eğitim kurumları ile de eğitim alanında önemli bir merkezdir. Zengin tarihi ve kültürel mirası, doğal güzellikleri ve stratejik konumu ile Balıkesir, Türkiye'nin önemli şehirlerinden biri olmaya devam etmektedir.
+</p>
+<hr>
+<h2>Balıkesir'in Konumu</h2>
+<img src="images/turkey-map.png" alt="Türkiye Siyasi Haritası" style="width:100%;max-width:600px;">
+<hr>
+<h2>Balıkesir İlçelerinde Gezilecek Yerler - Sizin İçin Seçtiklerimiz -</h2>
+<ul>
+  <li>
+    <a href="ayvalik.html">
+      <img src="images/ayvalık.png" alt="Görsel bulunamadı lütfen sayfayı yenileyiniz">
+      Ayvalık - Gezilecek Yerler
+    </a>
+  </li>
+  <hr>
+  <li>
+    <a href="edremit.html">
+      <img src="images/edremit.png" alt="Görsel bulunamadı lütfen sayfayı yenileyiniz">
+      Edremit - Gezilecek Yerler
+    </a>
+  </li>
+  <hr>
+  <li>
+    <a href="manyas.html">
+      <img src="images/manyas.png" alt="Görsel bulunamadı lütfen sayfayı yenileyiniz">
+      Manyas - Gezilecek Yerler
+    </a>
+  </li>
+</ul>
+<hr>
+
+<div class="footer">
+  <img src="uyglogo.png" alt="Görsel bulunamadı lütfen sayfayı yenileyiniz" class="balikesir-logo">
+  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1fmudr05eixtA7OjECTRbscj-cgyvk6M&ehbc=2E312F" width="300" height="300"></iframe>
+  <div class="footer-location">
+    <h4>Emeği geçenler</h4>
+    <p>
+      Onur Turda
+      <br> Bilgisayar mühendisliği 2.Sınıf öğrencisi
+    </p>
+    <p>
+      Birkan Zan
+      <br> Bilgisayar mühendisliği 2.Sınıf öğrencisi
+    </p>
+    <p>
+      Mücahit Gök
+      <br> Bilgisayar mühendisliği 2.Sınıf öğrencisi
+    </p>
+    
+  </div>
+  <div class="footer-contact">
+    <h4>Bize Ulaşın</h4>
+    <p>mucahit.gok98@gmail.com</p>
+    <p>onurr.turda@gmail.com</p>
+    <p>birkanzan6@gmail.com</p>
+  </div>
+</div>
+  </div>
+</body>
 </html>
