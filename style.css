@@ -197,3 +197,33 @@ button:hover{
     background-color: #f9f9f9;
     text-align: center;
   }
+  .travels-container{
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .travel-header{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgrey;
+    margin: 0 auto;
+  }
+  .travel-tittle{
+    width: 45%;
+  }
+  .travel-number{
+    width: 20%;
+  }
+  .travel-image{
+    width: 10%;
+  }
+  .travels-container ion-icon{
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
