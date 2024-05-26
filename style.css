@@ -227,3 +227,6 @@ button:hover{
     margin-right: 10px;
     cursor: pointer;
   }
+  .cart{
+    padding-right: 15px;
+  }
