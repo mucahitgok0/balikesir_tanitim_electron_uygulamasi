@@ -18,6 +18,18 @@ let travels = [
     },
 ];
 
+// localStorage'daki cartItems'ı oku ve travels dizisini güncelle
+let cartItems = localStorage.getItem('travelsInCart');
+cartItems = JSON.parse(cartItems);
+if (cartItems) {
+    travels = travels.map(travel => {
+        if (cartItems[travel.tag]) {
+            travel.inCart = cartItems[travel.tag].inCart;
+        }
+        return travel;
+    });
+}
+
 for (let i = 0; i < carts.length; i++) {
     carts[i].addEventListener('click', () => {
         cartNumbers(travels[i]);
@@ -67,7 +79,6 @@ function setItems(travel) {
             [travel.tag]: travel
         };
     }
-
     localStorage.setItem("travelsInCart", JSON.stringify(cartItems));
 }
 
