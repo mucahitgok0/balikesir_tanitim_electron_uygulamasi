@@ -218,6 +218,7 @@ button:hover{
   }
   .travel-image{
     text-align: right;
+    margin-right: 60px;
   }
   .travels-container ion-icon{
     font-size: 25px;
