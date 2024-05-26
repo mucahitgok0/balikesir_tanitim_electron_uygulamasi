@@ -24,58 +24,52 @@ for(let i=0; i<carts.length; i++){
 }
 function onLoadCartNumbers(){
     let travelNumbers = localStorage.getItem('cartNumbers');
-    let data = document.querySelectorAll('.cart span');
     if(travelNumbers){
-        data.textContent = travelNumbers;
+        document.querySelector('.cart span').textContent = travelNumbers;
     }
 }
 
 function cartNumbers(travels) {
-    console.log("the product clicked is",travels);
-        let travelNumbers = localStorage.getItem('cartNumbers');
+            console.log("tıklandığında verilerin localstoragee kaydedildiğini gösteriyor",travels);
+            let travelNumbers = localStorage.getItem('cartNumbers');
        
         
         travelNumbers = parseInt(travelNumbers);
         
         if( travelNumbers){
-            localStorage.setItem('cartNumbers',travelNumbers+1);
-            document.querySelector('.cart span').textContent = travelNumbers+1;
+            if(travels.inCart != 1){
+            localStorage.setItem('cartNumbers',travelNumbers+1);//kart numarasını localstorage a yazdır
+            document.querySelector('.cart span').textContent = travelNumbers+1;//kart numarasını ekrana yazdır
+            }
         }
         else{
-            localStorage.setItem('cartNumbers',1)
-            document.querySelectorAll('.cart span').textContent = 1;
+            localStorage.setItem('cartNumbers',1)//lcoal storage da kart numarası 1
+            document.querySelector('.cart span').textContent = 1;//ekranda kart numarası 1
+            
         }
+        //set gönderme
         setItems(travels);
         
 }
 
 function setItems(travels){
     let cartItems = localStorage.getItem('travelsInCart');
+    travels.inCart = 1;
     cartItems = JSON.parse(cartItems);
-
     if(cartItems != null){
-        if(cartItems[travels.tag] == undefined){
-            cartItems = {
-                ...cartItems,
-                [travels.tag]: travels
-            }
+        if(travels.inCart == 0){
+            if(cartItems[travels.tag] == undefined){
+                cartItems = {
+                    ...cartItems,
+                    [travels.tag]: travels
+                }
         }
-        cartItems[travels.tag].inCart += 1;
-    }
-    /*seçtiğin ürünün sayısını arttırıyor*/else{
-        travels.inCart = 1;
-
+        }
+    else{
         cartItems = {
             [travels.tag]: travels
         }
     }
-    /*
-    travels.inCart = 1;
-
-    cartItems = {
-        [travels.tag]: travels
-    }*/
-
     localStorage.setItem("travelsInCart",JSON.stringify
     (cartItems));
 }
@@ -85,6 +79,7 @@ function displayCart(){
     cartItems = JSON.parse(cartItems);
     let travelContainer = document.querySelector(".travels");
     console.log(cartItems);
+
     if(cartItems && travelContainer){
         travelContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
@@ -98,6 +93,6 @@ function displayCart(){
         });
     }
 }
-
 onLoadCartNumbers();
 displayCart();
+}
