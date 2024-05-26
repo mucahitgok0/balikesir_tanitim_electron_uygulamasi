@@ -52,7 +52,8 @@ function cartNumbers(travels) {
         
 }
 
-function setItems(travels){
+function setItems(travels)
+{
     let cartItems = localStorage.getItem('travelsInCart');
     travels.inCart = 1;
     cartItems = JSON.parse(cartItems);
@@ -64,7 +65,7 @@ function setItems(travels){
                     [travels.tag]: travels
                 }
         }
-        }
+        }}
     else{
         cartItems = {
             [travels.tag]: travels
@@ -74,12 +75,14 @@ function setItems(travels){
     (cartItems));
 }
 
+    
+
+
 function displayCart(){
     let cartItems = localStorage.getItem("travelsInCart");
     cartItems = JSON.parse(cartItems);
     let travelContainer = document.querySelector(".travels");
     console.log(cartItems);
-
     if(cartItems && travelContainer){
         travelContainer.innerHTML = '';
         Object.values(cartItems).map(item => {
@@ -95,4 +98,3 @@ function displayCart(){
 }
 onLoadCartNumbers();
 displayCart();
-}
