@@ -197,3 +197,57 @@ button:hover{
     background-color: #f9f9f9;
     text-align: center;
   }
+  .travels-container{
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .travel-header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 4px solid lightgrey;
+  }
+  .travel-tittle{
+    width: 45%;
+  }
+  .travel-number{
+    width: 20%;
+  }
+  .travel-image{
+    text-align: right;
+    margin-right: 60px;
+  }
+  .travels-container ion-icon{
+    font-size: 25px;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .cart{
+    padding-right: 15px;
+  }
+  .travel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  .travel span {
+    flex: 1;
+  }
+  
+  .travel img {
+    max-width: 100px;
+    margin-left: auto;
+  }
+  
+  .travel ion-icon {
+    margin-left: 10px;
+    cursor: pointer;
+  }
