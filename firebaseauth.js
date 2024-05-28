@@ -24,6 +24,19 @@
         messageDiv.style.opacity=0;
     },5000);
  }
+
+ function showIcons() {
+    const authButtons = document.getElementById('auth-buttons');
+    authButtons.innerHTML = `
+        <a href="profile.html" class="btn btn-primary">
+            <ion-icon name="person-circle-outline"></ion-icon> Profile
+        </a>
+        <a href="settings.html" class="btn btn-primary">
+            <ion-icon name="settings-outline"></ion-icon> Settings
+        </a>
+    `;
+}
+
  const signUp=document.getElementById('submitSignUp');
  signUp.addEventListener('click', (event)=>{
     event.preventDefault();
@@ -47,7 +60,8 @@
         const docRef=doc(db, "users", user.uid);
         setDoc(docRef,userData)
         .then(()=>{
-            window.location.href='index.html';
+            window.location.href='loginn.html';
+            showIcons
         })
         .catch((error)=>{
             console.error("error writing document", error);

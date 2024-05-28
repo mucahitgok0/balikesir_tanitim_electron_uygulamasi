@@ -13,63 +13,15 @@
 </head>
 
 <body class="navbarpadding">
-  <nav id="navbarKonum" class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <div class="container-fluid">
-      <a href="final.html">
-        <img src="uyglogo.png" class="logoResim" href="final.html">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="final.html">Ana Sayfa</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="ilceler.html" role="button" data-bs-toggle="dropdown">İlçeler</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="merkez.html">Merkez</a></li>
-              <li><a class="dropdown-item" href="ayvalik.html">Ayvalık</a></li>
-              <li><a class="dropdown-item" href="balya.html">Balya</a></li>
-              <li><a class="dropdown-item" href="bandirma.html">Bandırma</a></li>
-              <li><a class="dropdown-item" href="bigadic.html">Bigadiç</a></li>
-              <li><a class="dropdown-item" href="burhaniye.html">Burhaniye</a></li>
-              <li><a class="dropdown-item" href="dursunbey.html">Dursunbey</a></li>
-              <li><a class="dropdown-item" href="edremit.html">Edremit</a></li>
-              <li><a class="dropdown-item" href="erdek.html">Erdek</a></li>
-              <li><a class="dropdown-item" href="gomec.html">Gömeç</a></li>
-              <li><a class="dropdown-item" href="gonen.html">Gönen</a></li>
-              <li><a class="dropdown-item" href="havran.html">Havran</a></li>
-              <li><a class="dropdown-item" href="ivrindi.html">İvrindi</a></li>
-              <li><a class="dropdown-item" href="kepsut.html">Kepsut</a></li>
-              <li><a class="dropdown-item" href="manyas.html">Manyas</a></li>
-              <li><a class="dropdown-item" href="marmara.html">Marmara</a></li>
-              <li><a class="dropdown-item" href="savastepe.html">Savaştepe</a></li>
-              <li><a class="dropdown-item" href="sindirgi.html">Sındırgı</a></li>
-              <li><a class="dropdown-item" href="susurluk.html">Susurluk</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="etkinlikler.html">Etkinlikler</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="hakkimizda.html">Hakkımızda</a>
-          </li>
-          <div class="btn-group position-absolute end-0 " role="group" aria-label="Basic example">
-            <li class = "cart">
-              <a style="color: white;"href="./cart.html"><button class="btn btn-primary">
-                <icon-icon name="basket">cart<span>0</span>
-                <ion-icon name="checkmark-done-outline"></ion-icon>
-              </a>
-            </li>
-            <a style="padding-right: 15px;"href="./registerr.html"><button type="button" class="btn btn-primary">Kayıt ol</button></a>
-            <a style="padding-right: 15px;"href="./loginn.html"><button type="button" class="btn btn-primary">Giriş yap</button></a>
-          </div>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div id="navbar-placeholder"></div>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      });
+  </script>
   <a>Gönen</a>
 
   <div class="item">
