@@ -217,7 +217,7 @@ button:hover{
     width: 20%;
   }
   .travel-image{
-    text-align: right;
+    text-align: center;
     margin-right: 60px;
   }
   .travels-container ion-icon{
@@ -243,11 +243,13 @@ button:hover{
   }
   
   .travel img {
-    max-width: 100px;
+    max-width: 250px;
+    margin-right: 120px;
     margin-left: auto;
   }
   
   .travel ion-icon {
     margin-left: 10px;
+    margin-right: 0px;
     cursor: pointer;
   }

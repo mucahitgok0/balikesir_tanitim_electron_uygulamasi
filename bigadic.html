@@ -15,14 +15,16 @@
 <body class="navbarpadding">
   <div id="navbar-placeholder"></div>
 
-  <script>
-    fetch('navbar.html')
+  <script>// navbar.html' i sayfaya ekleme kodu
+    fetch('navbar.html')//navbar html' i yakalama
       .then(response => response.text())
       .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
+        document.getElementById('navbar-placeholder').innerHTML = data;//div in içeriğinin navbar html'in datasına eşitleme
       });
   </script>
-  <a>Bigadiç</a>
+  <main>
+    <h1> Bigadiç</h1>
+  </main>
 
   <div class="item">
     <h2>Bigadiç Kalesi</h2>
@@ -39,6 +41,7 @@
 <br>Günümüzde Bigadiç Kalesi, tarihi ve arkeolojik önemi nedeniyle ziyaretçilerin ilgisini çeken bir noktadır. Ziyaretçiler kalede tarihi atmosferi yaşayabilir, kaleye tırmanarak çevreyi seyredebilir ve tarihî dokuyu inceleyebilirler. Aynı zamanda kale çevresinde yapılan kazılarla birlikte kaleye dair yeni bilgilere ulaşılması hedeflenmektedir.
       
     </p>
+    <a class="add-cart" href="#"><button>Gezi Sepetime Ekle</button></a>
   </div>
   <div class="item">
     <h2>Bigadiç Müze ve Kültür Evi</h2>
@@ -55,6 +58,7 @@
 <br>Bigadiç Müze ve Kültür Evi, ziyaretçilerin ilgisini çeken ve bölgenin tarihine dair daha derinlemesine bilgi edinmek isteyenler için önemli bir durak noktasıdır.
       
     </p>
+    <a class="add-cart" href="#"><button>Gezi Sepetime Ekle</button></a>
   </div>
   <div class="item">
     <h2>Hisarköy</h2>
@@ -75,6 +79,7 @@ Kültürel açıdan da zengin bir yapıya sahiptir. Geleneksel köy yaşamı, ye
 Hisarköy, doğal güzellikleri, tarihi dokusu ve sıcakkanlı insanlarıyla Balıkesir'in keşfedilmeye değer köylerinden biridir.
       
     </p>
+    <a class="add-cart" href="#"><button>Gezi Sepetime Ekle</button></a>
   </div>
   <div class="item">
     <h2>Kasım Paşa Camii</h2>
@@ -93,6 +98,7 @@ Hisarköy, doğal güzellikleri, tarihi dokusu ve sıcakkanlı insanlarıyla Bal
 <br>Tarihi süreç içinde çeşitli restorasyon ve bakım çalışmalarıyla ayakta kalan Kasım Paşa Camii, yerel halkın ibadet ve kültürel etkinliklerinde önemli bir rol oynamaya devam etmektedir. Aynı zamanda turistlerin ve tarih tutkunlarının da ilgisini çeken bu yapı, Bigadiç'in tarihî ve kültürel mirasına önemli bir katkı sağlar.
       
     </p>
+    <a class="add-cart" href="#"><button>Gezi Sepetime Ekle</button></a>
   </div>
   <div class="item">
     <h2>Yeşilli Camii</h2>
@@ -113,6 +119,7 @@ Hisarköy, doğal güzellikleri, tarihi dokusu ve sıcakkanlı insanlarıyla Bal
 <br>Turistik Değer: Bigadiç ilçesine gelen turistlerin uğrak noktalarından biri olan Yeşilli Camii, tarihe ve mimariye ilgi duyan ziyaretçiler için önemli bir duraktır. Bölgeye özgü mimariyi görmek ve tarihi dokuyu yakından hissetmek isteyenler için cazip bir noktadır.
       
     </p>
+    <a class="add-cart" href="#"><button>Gezi Sepetime Ekle</button></a>
   </div>
   <script src="cart.js"></script>
 

@@ -15,14 +15,16 @@
 <body class="navbarpadding">
   <div id="navbar-placeholder"></div>
 
-  <script>
-    fetch('navbar.html')
+  <script>// navbar.html' i sayfaya ekleme kodu
+    fetch('navbar.html')//navbar html' i yakalama
       .then(response => response.text())
       .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
+        document.getElementById('navbar-placeholder').innerHTML = data;//div in içeriğinin navbar html'in datasına eşitleme
       });
   </script>
-  <a>Bandırma</a>
+    <main>
+      <h1> Bandırma</h1>
+    </main>
   <div class="item">
     <h2>Manyas Kuş Gölü</h2>
     <center>
@@ -36,6 +38,7 @@
       <br>Kısacası, Manyas Kuş Gölü, doğal güzellikleri ve biyolojik çeşitliliğiyle ön plana çıkan, Türkiye'nin önemli sulak alanlarından biridir ve hem yerli hem de yabancı turistler için popüler bir destinasyondur.      
       
     </p>
+    <a class="add-cart" href="#"><button>Gezi Sepetime Ekle</button></a>
   </div>
   <div class="item">
     <h2>Atatürk Parkı</h2>
@@ -66,6 +69,7 @@ Tarihi ve Kültürel Önemi
 <br>Park, adını Mustafa Kemal Atatürk'ten alır ve onun anısına yapılmış heykel ve anıtlarla süslenmiştir. Bu heykel ve anıtlar, parkın tarihi ve kültürel önemini artırır ve ziyaretçilere Atatürk'ün mirasını hatırlatır
       
     </p>
+    <a class="add-cart" href="#"><button>Gezi Sepetime Ekle</button></a>
   </div>
   <div class="item">
     <h2>Bandırma Arkeoloji Müzesi</h2>
@@ -88,6 +92,7 @@ Tarihi ve Kültürel Önemi
 <br>Bandırma Arkeoloji Müzesi, bölgenin kültürel ve tarihi değerlerini koruma ve tanıtma misyonuyla hizmet veren önemli bir kurumdur.
       
     </p>
+    <a class="add-cart" href="#"><button>Gezi Sepetime Ekle</button></a>
   </div>
   <div class="item">
     <h2>Cumhuriyet Meydanı</h2>
@@ -106,7 +111,9 @@ Tarihi ve Kültürel Önemi
       Tüm bu özellikleriyle Cumhuriyet Meydanı, Bandırma'nın sosyal ve kültürel hayatının önemli bir parçasıdır ve yerel halk ile ziyaretçiler için önemli bir buluşma noktasıdır.
 
       
+      
     </p>
+    <a class="add-cart" href="#"><button>Gezi Sepetime Ekle</button></a>
   </div>
   <div class="item">
     <h2>Daskyleion Antik Kenti</h2>

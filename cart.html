@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+ <title>Gezi Sepetim</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,11 +16,11 @@
 <body class="navbarpadding">
   <div id="navbar-placeholder"></div>
 
-  <script>
-    fetch('navbar.html')
+  <script>// navbar.html' i sayfaya ekleme kodu
+    fetch('navbar.html')//navbar html' i yakalama
       .then(response => response.text())
       .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
+        document.getElementById('navbar-placeholder').innerHTML = data;//div in içeriğinin navbar html'in datasına eşitleme
       });
   </script>
 
@@ -33,7 +33,7 @@
     <div class="travels"></div>
   </div>
 
-  <a>Gezi Planı</a>
+
   <script src="cart.js"></script>
 </body>
 

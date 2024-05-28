@@ -94,6 +94,7 @@
         .then(() => {
           console.log("User registered successfully.");
           alert("Üye kaydı başarıyla oluşturuldu.");
+          window.location.href = "loginn.html";
         })
         .catch((error) => {
           alert(error.message);
