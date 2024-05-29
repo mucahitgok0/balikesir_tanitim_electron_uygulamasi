@@ -3,12 +3,12 @@ body {
     margin: 0;
     padding: 0;    
     background-color: #c9d6ff;
-    background:linear-gradient(to right,#e2e2e2,#c9d6ff);
+    background:linear-gradient(to right,#e2e2e2,#c9d6ff); /*arkaplan dolgusu oluşturur*/
   }
   *{
     margin:0;
     padding:0;
-    box-sizing:border-box;
+    box-sizing:border-box; /*padding ve borderı dahil eder*/
     font-family:"poppins",sans-serif;
 }
 .container{
@@ -17,7 +17,7 @@ body {
     padding:1.5rem;
     margin:50px auto;
     border-radius:10px;
-    box-shadow:0 20px 35px rgba(0,0,1,0.9);
+    box-shadow:0 20px 35px rgba(0,0,1,0.9);/*gölge verir*/
 }
 form{
     margin:0 2rem;
@@ -40,27 +40,27 @@ input{
 }
 .input-group{
     padding:1% 0;
-    position:relative;
+    position:relative;/* Diğer elementler için referans noktası*/
 
 }
 .input-group i{
-    position:absolute;
+    position:absolute;/* tarayıcı penceresine göre konumlandırılır.*/
     color:black;
 }
 input:focus{
     background-color: transparent;
-    outline:transparent;
+    outline:transparent;/*dış çizgilere şeffaflık verir*/
     border-bottom:2px solid hsl(327,90%,28%);
 }
 input::placeholder{
-    color:transparent;
+    color:transparent;/*şeffaflık verir*/
 }
 label{
     color:#757575;
     position:relative;
     left:1.2em;
     top:-1.3em;
-    cursor:auto;
+    cursor:auto;/*fare imlecinin görünümünü belirler*/
     transition:0.3s ease all;
 }
 input:focus~label,input:not(:placeholder-shown)~label{
@@ -75,7 +75,7 @@ input:focus~label,input:not(:placeholder-shown)~label{
 
 }
 .recover a{
-    text-decoration:none;
+    text-decoration:none;/*alt çizgiyi kaldırır */
     color:rgb(125,125,235);
 }
 .recover a:hover{
@@ -86,12 +86,12 @@ button{
     font-size:1.1rem;
     padding:8px 0;
     border-radius:5px;
-    outline:none;
-    border:none;
+    outline:none;/*dış çizgiyi kaldırır*/
+    border:none;/*kenarları kaldırır*/
     width:100%;
     background:rgb(125,125,235);
     color:white;
-    cursor:pointer;
+    cursor:pointer;/*fare imlecinin el şeklini almasını sağlar*/
     transition:0.9s;
 }
 button:hover{
@@ -110,7 +110,7 @@ button:hover{
     padding:0.8rem 1.5rem;
     border-radius:10px;
     font-size:1.5rem;
-    cursor:pointer;
+    cursor:pointer;/*fare imlecinin el şeklini almasını sağlar*/
     border:2px solid #dfe9f5;
     margin:0 15px;
     transition:1s;
@@ -121,8 +121,8 @@ button:hover{
     border:2px solid rgb(125,125,235);
 }
 .links{
-    display:flex;
-    justify-content:space-around;
+    display:flex;/*hizalamak ve düzenlemek için kullanılır*/
+    justify-content:space-around;/*ogeler arasında eşit boşluk bırakır*/
     padding:0 4rem;
     margin-top:0.9rem;
     font-weight:bold;
@@ -145,8 +145,8 @@ button:hover{
     margin:10px;
     border-radius: 5px;
     font-size:1rem;
-    opacity:0;
-    animation:fadeOut 7s forwards;
+    opacity:0;/*görünürlüğü ayarlar. şuanda görünmez*/
+    animation:fadeOut 7s forwards;/*sayfa geçişlerine yumuşaklık sağlar*/
 }
 .logoResim{
 
@@ -183,8 +183,8 @@ button:hover{
   }
   
   .item p {
-    text-align: justify;
-    line-height: 2.0;
+    text-align: justify;/*paragrafları 2 yana yaslar*/
+    line-height: 2.0; 
     
   }
   h1{
@@ -193,7 +193,7 @@ button:hover{
     padding: 10px;
     margin: 20px auto;
     width: 20%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);/*gölge veriyor*/
     background-color: #f9f9f9;
     text-align: center;
   }
@@ -225,7 +225,7 @@ button:hover{
     color: blue;
     margin-left: 10px;
     margin-right: 10px;
-    cursor: pointer;
+    cursor: pointer;/*fare imlecinin el şeklini almasını sağlar*/
   }
   .cart{
     padding-right: 15px;
@@ -251,5 +251,5 @@ button:hover{
   .travel ion-icon {
     margin-left: 10px;
     margin-right: 0px;
-    cursor: pointer;
+    cursor: pointer;/*fare imlecinin el şeklini almasını sağlar*/
   }
