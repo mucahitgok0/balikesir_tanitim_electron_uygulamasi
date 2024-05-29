@@ -33,103 +33,129 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  //carts dizisndeki nesnleri döngüye alıyoruz
   for (let i = 0; i < carts.length; i++) {
+    //click gerçekleştiğinde  
     carts[i].addEventListener('click', () => {
+      //travels dizisini cartNumbers için parametre gönderir
       cartNumbers(travels[i]);
     });
   }
 
-  function onLoadCartNumbers() {
-    let travelNumbers = localStorage.getItem('cartNumbers');
-    if (travelNumbers) {
+  // Sayfa yüklendiğinde, sepetin içindeki gezilecek yer sayısını yükleyen fonksiyon
+function onLoadCartNumbers() {
+  // localStorage'dan 'cartNumbers' olan değeri alıyoruz
+  let travelNumbers = localStorage.getItem('cartNumbers');
+  // Eğer 'cartNumbers' değeri varsa, bu değeri sepete ekliyoruz
+  if (travelNumbers) {
       document.querySelector('.cart span').textContent = travelNumbers;
-    }
   }
+}
 
-  function cartNumbers(travel) {
-    let travelNumbers = localStorage.getItem('cartNumbers');
-    travelNumbers = parseInt(travelNumbers);
+// Bir ürünü sepete eklemek için kullanılan fonksiyon
+function cartNumbers(travel) {
+  // localStorage'dan 'cartNumbers' olan değeri alıyoruz
+  let travelNumbers = localStorage.getItem('cartNumbers');
+  travelNumbers = parseInt(travelNumbers);
 
-    if (travelNumbers) {
+  // Eğer 'cartNumbers' değeri varsa ve travel öğesi sepette değilse, sayıyı artırıyoruz
+  if (travelNumbers) {
       if (travel.inCart === 0) {
-        localStorage.setItem('cartNumbers', travelNumbers + 1);
-        document.querySelector('.cart span').textContent = travelNumbers + 1;
+          localStorage.setItem('cartNumbers', travelNumbers + 1);
+          document.querySelector('.cart span').textContent = travelNumbers + 1;
       }
-    } else {
+  } else {
+      // Eğer 'cartNumbers' değeri yoksa, değeri 1 yapıyoruz ve sepet simgesine yazıyoruz
       localStorage.setItem('cartNumbers', 1);
       document.querySelector('.cart span').textContent = 1;
-    }
-
-    setItems(travel);
   }
 
-  function setItems(travel) {
-    let cartItems = localStorage.getItem('travelsInCart');
-    cartItems = JSON.parse(cartItems);
+  // Sepete eklenen yerleri localStorage'a kaydediyoruz
+  setItems(travel);
+}
 
-    if (cartItems != null) {
+// Sepete eklenen yerleri localStorage'a kaydetmek için kullanılan fonksiyon
+function setItems(travel) {
+  // localStorage'dan 'travelsInCart' olan değeri alıyoruz ve JSON formatına çeviriyoruz
+  let cartItems = localStorage.getItem('travelsInCart');
+  cartItems = JSON.parse(cartItems);
+
+  // Eğer 'cartItems' null değilse ve travel öğesi daha önce eklenmemişse, travel öğesini ekliyoruz
+  if (cartItems != null) {
       if (cartItems[travel.tag] === undefined) {
-        cartItems = {
-          ...cartItems,
-          [travel.tag]: travel
-        };
+          cartItems = {
+              ...cartItems,
+              [travel.tag]: travel
+          };
       }
+        //cart numbers değerinin  yapılmasının nedeni daha sonrasında sepete eklemeyi engellemek
+      // Eğer travel öğesi sepette 1'den fazla değilse, 'inCart' sayısını artırıyoruz
       if (cartItems[travel.tag].inCart != 1) {
-        cartItems[travel.tag].inCart += 1;
+          cartItems[travel.tag].inCart += 1;
       }
-    } else {
+  } else {
+      // Eğer 'cartItems' null ise, travel öğesini sepete ekliyoruz ve 'inCart' değerini 1 yapıyoruz
       travel.inCart = 1;
       cartItems = {
-        [travel.tag]: travel
+          [travel.tag]: travel
       };
-    }
-    localStorage.setItem("travelsInCart", JSON.stringify(cartItems));
   }
+  // 'travelsInCart' anahtarıyla güncellenmiş 'cartItems' değerini localStorage'a kaydediyoruz
+  localStorage.setItem("travelsInCart", JSON.stringify(cartItems));
+}
 
-  function displayCart() {
-    let cartItems = localStorage.getItem("travelsInCart");
-    cartItems = JSON.parse(cartItems);
-    let travelContainer = document.querySelector(".travels");
+// Sepetteki ürünleri ekranda gösteren fonksiyon
+function displayCart() {
+  // localStorage'dan 'travelsInCart' anahtarına sahip değeri alıyoruz ve JSON formatına çeviriyoruz
+  let cartItems = localStorage.getItem("travelsInCart");
+  cartItems = JSON.parse(cartItems);
+  let travelContainer = document.querySelector(".travels");
 
-    if (cartItems && travelContainer) {
+  // Eğer 'cartItems' ve 'travelContainer' varsa, sepet öğelerini ekranda gösteriyoruz
+  if (cartItems && travelContainer) {
       travelContainer.innerHTML = '';
+      // Sepetteki her ürünü ekranda gösteriyoruz
       Object.values(cartItems).forEach((item, index) => {
-        travelContainer.innerHTML += `
-          <div class="travel" id="travel-${index}">
-            <span>${item.name}</span>
-            <img src="./images/${item.tag}.jpg" alt="${item.name}">
-            <ion-icon name="trash-outline" class="remove-item" data-tag="${item.tag}"></ion-icon>
-          </div>
-        `;
+          travelContainer.innerHTML += `
+              <div class="travel" id="travel-${index}">
+                  <span>${item.name}</span>
+                  <img src="./images/${item.tag}.jpg" alt="${item.name}">
+                  <ion-icon name="trash-outline" class="remove-item" data-tag="${item.tag}"></ion-icon>
+              </div>
+          `;
       });
 
-      // Add event listeners to the trash icons
       let removeIcons = document.querySelectorAll('.remove-item');
       removeIcons.forEach(icon => {
-        icon.addEventListener('click', (e) => {
-          let tag = e.target.getAttribute('data-tag');
-          removeItem(tag);
-        });
+          icon.addEventListener('click', (e) => {
+              let tag = e.target.getAttribute('data-tag');
+              removeItem(tag);
+          });
       });
-    }
   }
+}
 
-  function removeItem(tag) {
-    let cartItems = JSON.parse(localStorage.getItem('travelsInCart'));
-    if (cartItems && cartItems[tag]) {
+// Sepetten ürün çıkarmak için kullanılan fonksiyon
+function removeItem(tag) {
+  // localStorage'dan 'travelsInCart' anahtarına sahip değeri alıyoruz ve JSON formatına çeviriyoruz
+  let cartItems = JSON.parse(localStorage.getItem('travelsInCart'));
+  // Eğer 'cartItems' ve 'cartItems[tag]' varsa, ilgili yeri çıkartıyoruz
+  if (cartItems && cartItems[tag]) {
       delete cartItems[tag];
       localStorage.setItem('travelsInCart', JSON.stringify(cartItems));
 
+      // 'cartNumbers' değerini bir azaltıyoruz ve sepet simgesine yazıyoruz
       let travelNumbers = localStorage.getItem('cartNumbers');
       travelNumbers = parseInt(travelNumbers) - 1;
       localStorage.setItem('cartNumbers', travelNumbers);
       document.querySelector('.cart span').textContent = travelNumbers;
 
+      // Güncellenmiş sepeti tekrar ekranda gösteriyoruz
       displayCart();
-    }
   }
-  
+}
 
-  onLoadCartNumbers();
-  displayCart();
+// Sayfa yüklendiğinde sepet sayısını ve içeriğini ekranda göstermek için çağırıyoruz
+onLoadCartNumbers();
+displayCart();
 });
