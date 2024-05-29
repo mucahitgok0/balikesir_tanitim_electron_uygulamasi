@@ -1,9 +1,6 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
-// Your web app's Firebase configuration
+// web uygulamasının firebase yapılandırır
 const firebaseConfig = {
   apiKey: "AIzaSyA6Fwfw3F3Y_u92Pz7TtIpXppupb9HOJM0",
   authDomain: "uyegirisi-6d8bb.firebaseapp.com",
@@ -13,7 +10,7 @@ const firebaseConfig = {
   appId: "1:22820827496:web:d790a709dcd015626166dd"
 };
 
-// Initialize Firebase
+// firebase'i başlatma kodu
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 auth.languageCode = 'en';

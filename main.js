@@ -1,11 +1,11 @@
+//elektorn ve gerekli modülleri yükleme
 const electron = require("electron");
 const url = require("url");
 const path = require("path");
-const { protocol } = require("electron");
 
 const {app, BrowserWindow} = electron;
 let mainWindow;
-
+//uygulama hazır olduğunda final.html'i çalıştıracak kod
 file://
 app.on('ready', () =>{
     mainWindow = new BrowserWindow({});
